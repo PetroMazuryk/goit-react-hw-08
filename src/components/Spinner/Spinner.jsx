@@ -1,6 +1,6 @@
 import { ColorRing } from 'react-loader-spinner';
 
-export default function Spinner() {
+export const Spinner = () => {
   return (
     <div>
       <ColorRing
@@ -19,4 +19,4 @@ export default function Spinner() {
       />
     </div>
   );
-}
+};

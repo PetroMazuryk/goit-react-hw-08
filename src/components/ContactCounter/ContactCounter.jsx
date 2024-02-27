@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { selectAllContacts } from '../../redux/selectors';
 import css from './ContactCounter.module.css';
 
-export default function ContactCounter() {
+export const ContactCounter = () => {
   const contacts = useSelector(selectAllContacts);
   const countContacts = contacts.length;
 
@@ -12,4 +12,4 @@ export default function ContactCounter() {
       <span className={css.total}> {countContacts}</span>
     </div>
   );
-}
+};

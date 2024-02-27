@@ -1,66 +1,15 @@
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import ContactList from './components/ContactList/ContactList.jsx';
-import Section from './components/Section/Section.jsx';
-import SearchBar from './components/SearchBar/SearchBar.jsx';
-import ContactForm from './components/ContactForm/ContactForm.jsx';
-import PhoneTitle from './components/PhoneTitle/PhoneTitle.jsx';
-import ContactCounter from './components/ContactCounter/ContactCounter.jsx';
-import Notification from './components/Notification/Notification.jsx';
-import { fetchContacts } from './redux/operations.js';
-import Spinner from './components/Spinner/Spinner.jsx';
-import {
-  selectAllContacts,
-  selectIsLoading,
-  selectError,
-} from './redux/selectors.js';
-
-import { AppBar } from './components/AppBar/AppBar.jsx';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout.jsx';
+import Contacts from './pages/Contacts/Contacts.jsx';
 
 export const App = () => {
-  const dispatch = useDispatch();
-  const contactsAll = useSelector(selectAllContacts);
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
-
-  useEffect(() => {
-    dispatch(fetchContacts());
-  }, [dispatch]);
   return (
     <>
-      <AppBar />
-      <PhoneTitle />
-
-      <Section title="Add new contacts">
-        <ContactForm />
-      </Section>
-
-      {contactsAll.length > 0 && (
-        <Section title="Find contacts by name">
-          <SearchBar />
-        </Section>
-      )}
-
-      <Section title="Contact List">
-        {contactsAll.length > 0 ? (
-          <>
-            <ContactCounter />
-            <ContactList />
-          </>
-        ) : (
-          <>
-            {!error && (
-              <>
-                <Notification message="There is no added contacts"></Notification>
-              </>
-            )}
-
-            {error && <Notification error={error} />}
-          </>
-        )}
-      </Section>
-
-      {isLoading && !error && <Spinner />}
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/contacts" element={<Contacts />} />
+        </Route>
+      </Routes>
     </>
   );
 };

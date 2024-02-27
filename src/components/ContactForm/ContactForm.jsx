@@ -28,7 +28,7 @@ const initialValues = {
   number: '',
 };
 
-export default function ContactForm() {
+export const ContactForm = () => {
   const nameFieldId = useId();
   const numberFieldId = useId();
   const dispatch = useDispatch();
@@ -114,4 +114,4 @@ export default function ContactForm() {
       />
     </div>
   );
-}
+};

@@ -3,7 +3,7 @@ import Contact from '../Contact/Contact';
 import { useSelector } from 'react-redux';
 import { selectVisibleContacts } from '../../redux/selectors';
 
-export default function ContactList() {
+export const ContactList = () => {
   const filteredContactList = useSelector(selectVisibleContacts);
 
   return (
@@ -15,4 +15,4 @@ export default function ContactList() {
       ))}
     </TransitionGroup>
   );
-}
+};

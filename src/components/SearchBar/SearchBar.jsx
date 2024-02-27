@@ -3,7 +3,7 @@ import { setFilterValue } from '../../redux/filtersSlice';
 import { selectFilter } from '../../redux/selectors';
 import css from './SearchBar.module.css';
 
-export default function SearchBar() {
+export const SearchBar = () => {
   const dispatch = useDispatch();
   const filter = useSelector(selectFilter);
 
@@ -32,4 +32,4 @@ export default function SearchBar() {
       )}
     </div>
   );
-}
+};

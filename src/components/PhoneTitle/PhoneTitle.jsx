@@ -2,7 +2,7 @@ import { createRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import css from './PhoneTitle.module.css';
 
-export default function PhoneTitle() {
+export const PhoneTitle = () => {
   const itemRef = createRef(null);
 
   return (
@@ -18,4 +18,4 @@ export default function PhoneTitle() {
       </h1>
     </CSSTransition>
   );
-}
+};
