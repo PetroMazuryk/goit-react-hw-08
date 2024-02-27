@@ -5,7 +5,6 @@ import { selectVisibleContacts } from '../../redux/selectors';
 
 export default function ContactList() {
   const filteredContactList = useSelector(selectVisibleContacts);
-  // console.log(filteredContactList);
 
   return (
     <TransitionGroup>

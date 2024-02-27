@@ -15,6 +15,8 @@ import {
   selectError,
 } from './redux/selectors.js';
 
+import { AppBar } from './components/AppBar/AppBar.jsx';
+
 export const App = () => {
   const dispatch = useDispatch();
   const contactsAll = useSelector(selectAllContacts);
@@ -26,6 +28,7 @@ export const App = () => {
   }, [dispatch]);
   return (
     <>
+      <AppBar />
       <PhoneTitle />
 
       <Section title="Add new contacts">
