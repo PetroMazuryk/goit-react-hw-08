@@ -2,7 +2,7 @@ import { FcTabletAndroid } from 'react-icons/fc';
 import { IconContext } from 'react-icons';
 import { Navigation } from '../Navigation/Navigation';
 import { UserMenu } from '../../components/UserMenu/UserMenu';
-import { AuthNav } from '../../components/AuthNav/Authnav';
+import { AuthNav } from '../../components/AuthNav/AuthNav';
 import { useAuth } from '../../hooks';
 
 import css from './AppBar.module.css';
