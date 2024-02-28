@@ -7,13 +7,14 @@ import { ContactForm } from '../../components/ContactForm/ContactForm.jsx';
 import { PhoneTitle } from '../../components/PhoneTitle/PhoneTitle.jsx';
 import { ContactCounter } from '../../components/ContactCounter/ContactCounter.jsx';
 import { Notification } from '../../components/Notification/Notification.jsx';
-import { fetchContacts } from '../../redux/operations.js';
+import { fetchContacts } from '../../redux/contacts/operations.js';
 import { Spinner } from '../../components/Spinner/Spinner.jsx';
 import {
   selectAllContacts,
   selectIsLoading,
   selectError,
-} from '../../redux/selectors.js';
+} from '../../redux/contacts/selectors.js';
+
 export default function Contacts() {
   const dispatch = useDispatch();
   const contactsAll = useSelector(selectAllContacts);

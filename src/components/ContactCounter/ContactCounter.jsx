@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { selectAllContacts } from '../../redux/selectors';
+import { selectAllContacts } from '../../redux/contacts/selectors';
 import css from './ContactCounter.module.css';
 
 export const ContactCounter = () => {

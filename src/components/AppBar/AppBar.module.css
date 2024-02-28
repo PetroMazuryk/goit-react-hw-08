@@ -14,3 +14,15 @@
   font-size: 24px;
   color: black;
 }
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #2a363b;
+}
+
+.link.active {
+  color: #e84a5f;
+}

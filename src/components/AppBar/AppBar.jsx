@@ -15,6 +15,10 @@ export const AppBar = () => {
         </IconContext.Provider>
         <span className={css.span}> Your favorite phone book</span>
       </div>
+      <div>
+        <div className={css.link}>Registration</div>
+        <div className={css.link}>Login</div>
+      </div>
     </div>
   );
 };

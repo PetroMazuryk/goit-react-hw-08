@@ -2,8 +2,8 @@ import { Formik, Form, Field } from 'formik';
 import { useId } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from '../../redux/operations';
-import { selectAllContacts } from '../../redux/selectors';
+import { addContact } from '../../redux/contacts/operations';
+import { selectAllContacts } from '../../redux/contacts/selectors';
 
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -44,6 +44,9 @@ export const ContactForm = () => {
     if (contactAlreadyExists) {
       toast.error(`A contact with the name "${name}" already exists`);
     } else {
+      toast.success(
+        `Congratulations, you have added a contact with a name "${name}" `
+      );
       const newContact = { name, number };
       dispatch(addContact(newContact));
       resetForm();
@@ -105,10 +108,6 @@ export const ContactForm = () => {
           error: {
             duration: 4000,
             icon: '🔥',
-            theme: {
-              primary: 'green',
-              secondary: 'black',
-            },
           },
         }}
       />
