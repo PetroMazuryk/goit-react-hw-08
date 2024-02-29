@@ -24,6 +24,7 @@ export default function Contacts() {
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
+
   return (
     <>
       <PhoneTitle />
@@ -32,11 +33,9 @@ export default function Contacts() {
         <ContactForm />
       </Section>
 
-      {contactsAll.length > 0 && (
-        <Section title="Find contacts by name">
-          <SearchBar />
-        </Section>
-      )}
+      <Section title="Find contacts by name">
+        <SearchBar />
+      </Section>
 
       <Section title="Contact List">
         {contactsAll.length > 0 ? (

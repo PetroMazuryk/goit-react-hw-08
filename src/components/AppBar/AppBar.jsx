@@ -10,7 +10,7 @@ import css from './AppBar.module.css';
 export const AppBar = () => {
   const { isLoggedIn } = useAuth();
   return (
-    <div className={css.container}>
+    <header className={css.container}>
       <Navigation />
       <div>
         <IconContext.Provider value={{ size: '36px' }}>
@@ -18,7 +18,7 @@ export const AppBar = () => {
         </IconContext.Provider>
         <span className={css.span}> Your favorite phone book</span>
       </div>
-      <div>{isLoggedIn ? <UserMenu /> : <AuthNav />}</div>
-    </div>
+      {isLoggedIn ? <UserMenu /> : <AuthNav />}
+    </header>
   );
 };
