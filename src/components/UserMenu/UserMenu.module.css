@@ -5,10 +5,16 @@
 }
 
 .username {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
 }
 
+.logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
 .button {
   width: 140px;
   padding: 6px;

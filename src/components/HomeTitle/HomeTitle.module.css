@@ -3,7 +3,7 @@
   border: 1px solid #76b5c5;
   margin: 0 auto;
   padding: 14px 20px;
-  box-shadow: -2px -2px 9px #fff, 11px 11px 21px -8px #000;
+  box-shadow: var(--box-shadow);
   border-radius: 8px;
 }
 
