@@ -20,6 +20,7 @@
 .label {
   text-shadow: var(--text-shadow-label);
 }
+
 .field {
   width: 300px;
   height: 30px;
