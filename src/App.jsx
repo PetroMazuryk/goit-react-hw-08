@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout.jsx';
 import { RestrictedRoute } from './components/RestrictedRoute.jsx';
 import { PrivateRoute } from './components/PrivateRoute.jsx';
-import { useAuth } from './hooks/useAuth.js';
+import { useAuth } from './hooks';
 import { refreshUser } from './redux/auth/operations.js';
 
 import Home from './pages/Home/Home.jsx';

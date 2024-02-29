@@ -7,7 +7,7 @@
   gap: 12px;
   margin-bottom: 10px;
   border-radius: 10px;
-  box-shadow: -4px -4px 6px #fff, 8px 8px 16px -8px #eb5757;
+  box-shadow: var(--box-shadow-form);
 }
 
 .labelWrapper {
@@ -17,6 +17,9 @@
   gap: 4px;
 }
 
+.label {
+  text-shadow: var(--text-shadow-label);
+}
 .field {
   width: 300px;
   height: 30px;
@@ -24,7 +27,7 @@
   font-weight: 700;
   padding: 8px;
   margin-right: 14px;
-  box-shadow: -5px -5px 9px #fff inset, 2px 2px 18px -10px #000 inset;
+  box-shadow: var(--box-shadow-input);
 }
 
 .error {

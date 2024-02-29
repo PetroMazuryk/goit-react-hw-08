@@ -6,7 +6,7 @@
   margin-bottom: 10px;
   padding: 4px 16px;
   border-radius: 10px;
-  box-shadow: -4px -4px 6px #fff, 8px 8px 16px -8px #eb5757;
+  box-shadow: var(--box-shadow-form);
 }
 
 .icon {

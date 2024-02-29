@@ -33,9 +33,11 @@ export default function Contacts() {
         <ContactForm />
       </Section>
 
-      <Section title="Find contacts by name">
-        <SearchBar />
-      </Section>
+      {contactsAll.length > 0 && (
+        <Section title="Find contacts by name">
+          <SearchBar />
+        </Section>
+      )}
 
       <Section title="Contact List">
         {contactsAll.length > 0 ? (
