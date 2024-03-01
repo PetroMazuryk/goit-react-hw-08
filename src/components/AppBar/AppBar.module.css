@@ -10,8 +10,14 @@
   background-image: url(../../assets/bg_3.jpg);
 }
 
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .span {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
   color: black;
 }

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, lazy } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout.jsx';
@@ -7,10 +7,10 @@ import { PrivateRoute } from './components/PrivateRoute.jsx';
 import { useAuth } from './hooks';
 import { refreshUser } from './redux/auth/operations.js';
 
-import Home from './pages/Home/Home.jsx';
-import Register from './pages/Register/Register.jsx';
-import Login from './pages/Login/Login.jsx';
-import Contacts from './pages/Contacts/Contacts.jsx';
+const Home = lazy(() => import('./pages/Home/Home.jsx'));
+const Register = lazy(() => import('./pages/Register/Register.jsx'));
+const Login = lazy(() => import('./pages/Login/Login.jsx'));
+const Contacts = lazy(() => import('./pages/Contacts/Contacts.jsx'));
 
 export const App = () => {
   const dispatch = useDispatch();

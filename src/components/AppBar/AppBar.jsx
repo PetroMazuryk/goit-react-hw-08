@@ -12,7 +12,7 @@ export const AppBar = () => {
   return (
     <header className={css.container}>
       <Navigation />
-      <div>
+      <div className={css.wrapper}>
         <IconContext.Provider value={{ size: '36px' }}>
           <FcTabletAndroid />
         </IconContext.Provider>
