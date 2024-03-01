@@ -1,11 +1,9 @@
 import { Formik, Form, Field } from 'formik';
 import { useId } from 'react';
-
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
 import { selectAllContacts } from '../../redux/contacts/selectors';
-
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 import * as Yup from 'yup';
 import { ErrorMessage } from 'formik';
@@ -95,22 +93,6 @@ export const ContactForm = () => {
           </button>
         </Form>
       </Formik>
-      <Toaster
-        position="top-center"
-        containerStyle={{ marginTop: 98 }}
-        toastOptions={{
-          style: {
-            maxWidth: '800px',
-            borderRadius: '24px',
-            background: '#363636',
-            color: '#fff',
-          },
-          error: {
-            duration: 4000,
-            icon: '🔥',
-          },
-        }}
-      />
     </div>
   );
 };

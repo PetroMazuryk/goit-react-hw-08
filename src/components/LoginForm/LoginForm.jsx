@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 import { BsEyeSlash, BsEye } from 'react-icons/bs';
 import { logIn } from '../../redux/auth/operations';
 import css from './LoginForm.module.css';
@@ -16,7 +17,14 @@ export const LoginForm = () => {
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
-    );
+    )
+      .unwrap()
+      .then(() => {
+        toast.success('Login success');
+      })
+      .catch(() => {
+        toast.error('Login error');
+      });
     form.reset();
   };
 
