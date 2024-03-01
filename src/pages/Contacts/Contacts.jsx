@@ -14,6 +14,7 @@ import {
   selectIsLoading,
   selectError,
 } from '../../redux/contacts/selectors.js';
+import { DocumentTitle } from '../../components/DocumentTitle.jsx';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -27,6 +28,7 @@ export default function Contacts() {
 
   return (
     <>
+      <DocumentTitle>Contacts</DocumentTitle>
       <PhoneTitle />
 
       <Section title="Add new contacts">
