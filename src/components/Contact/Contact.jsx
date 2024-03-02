@@ -6,6 +6,7 @@ import { deleteContact } from '../../redux/contacts/operations';
 import { Button } from '../Button/Button';
 import { Modal } from '../Modal/Modal';
 import { editContact } from '../../redux/contacts/operations';
+import toast from 'react-hot-toast';
 import css from './Contact.module.css';
 
 export default function Contact({ contact: { id, name, number } }) {
@@ -16,8 +17,16 @@ export default function Contact({ contact: { id, name, number } }) {
 
   const handleSave = () => {
     setShowModal(false);
-    dispatch(editContact({ id: id, name: newName, number: newNumber }));
+    dispatch(editContact({ id: id, name: newName, number: newNumber }))
+      .unwrap()
+      .then(() => {
+        toast.success('Edit success');
+      })
+      .catch(() => {
+        toast.error('Edit error');
+      });
   };
+
   const handleNameChange = e => {
     setNewName(e.target.value);
   };
@@ -59,8 +68,12 @@ export default function Contact({ contact: { id, name, number } }) {
           </div>
 
           <div className={css.BtnWrapperModal}>
-            <Button onClick={handleCancel}>Cancel</Button>
-            <Button onClick={handleSave}>Yes</Button>
+            <Button variant="clear" onClick={handleCancel}>
+              Cancel
+            </Button>
+            <Button variant="add" onClick={handleSave}>
+              Yes
+            </Button>
           </div>
         </form>
       </Modal>
@@ -78,11 +91,10 @@ export default function Contact({ contact: { id, name, number } }) {
           </p>
         </div>
         <div className={css.BtnWrapper}>
-          <Button onClick={() => setShowModal(true)}>Edit</Button>
-          <Button
-            onClick={() => dispatch(deleteContact(id))}
-            className={css.button}
-          >
+          <Button variant="clear" onClick={() => setShowModal(true)}>
+            Edit
+          </Button>
+          <Button variant="delete" onClick={() => dispatch(deleteContact(id))}>
             Delete
           </Button>
         </div>

@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilterValue } from '../../redux/contacts/filtersSlice';
 import { selectFilter } from '../../redux/contacts/selectors';
+import { Button } from '../Button/Button';
 import css from './SearchBar.module.css';
 
 export const SearchBar = () => {
@@ -26,9 +27,9 @@ export const SearchBar = () => {
         onChange={handleFilterChange}
       />
       {filter && (
-        <button className={css.button} onClick={clearFilter}>
+        <Button variant="clear" onClick={clearFilter}>
           Clear
-        </button>
+        </Button>
       )}
     </div>
   );

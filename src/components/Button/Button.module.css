@@ -34,3 +34,18 @@
   -o-transform: scale(1.1);
   color: red;
 }
+
+.myBtn:hover.add,
+.myBtn:focus.add {
+  color: green;
+}
+
+.myBtn:hover.clear,
+.myBtn:focus.clear {
+  color: blue;
+}
+
+.myBtn:hover.delete,
+.myBtn:focus.delete {
+  color: red;
+}

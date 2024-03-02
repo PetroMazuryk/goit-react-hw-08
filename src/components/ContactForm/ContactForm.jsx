@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addContact } from '../../redux/contacts/operations';
 import { selectAllContacts } from '../../redux/contacts/selectors';
 import toast from 'react-hot-toast';
+import { Button } from '../Button/Button';
 
 import * as Yup from 'yup';
 import { ErrorMessage } from 'formik';
@@ -88,9 +89,16 @@ export const ContactForm = () => {
             />
           </div>
 
-          <button className={css.button} type="submit">
+          <Button
+            style={{
+              width: 110,
+              margin: 'auto',
+            }}
+            variant="add"
+            type="submit"
+          >
             Add contact
-          </button>
+          </Button>
         </Form>
       </Formik>
     </div>

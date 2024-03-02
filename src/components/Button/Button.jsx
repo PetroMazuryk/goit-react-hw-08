@@ -1,8 +1,9 @@
+import clsx from 'clsx';
 import css from './Button.module.css';
 
-export const Button = ({ children, ...props }) => {
+export const Button = ({ variant, children, ...props }) => {
   return (
-    <button {...props} className={css.myBtn}>
+    <button className={clsx(css.myBtn, css[variant])} {...props}>
       {children}
     </button>
   );
