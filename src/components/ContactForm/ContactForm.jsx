@@ -45,7 +45,7 @@ export const ContactForm = () => {
 
     if (contactAlreadyExists) {
       toast.error(
-        `A contact with the name "${name}" or "${number}" already exists`
+        `A contact with the name "${name}" or number "${number}" already exists`
       );
     } else {
       toast.success(

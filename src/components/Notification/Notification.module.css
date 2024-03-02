@@ -1,5 +1,5 @@
 .messageWrapper {
-  width: 480px;
+  max-width: 680px;
   margin: 20px auto;
   padding: 12px;
   border: 1px solid grey;
