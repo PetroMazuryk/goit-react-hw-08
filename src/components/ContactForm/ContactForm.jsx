@@ -38,15 +38,20 @@ export const ContactForm = () => {
     const { name, number } = values;
 
     const contactAlreadyExists = contacts.find(
-      contact => contact.name.toLowerCase() === name.toLowerCase()
+      contact =>
+        contact.name.toLowerCase() === name.toLowerCase() ||
+        contact.number.replace(/\D/g, '') === number.replace(/\D/g, '')
     );
 
     if (contactAlreadyExists) {
-      toast.error(`A contact with the name "${name}" already exists`);
+      toast.error(
+        `A contact with the name "${name}" or "${number}" already exists`
+      );
     } else {
       toast.success(
         `Congratulations, you have added a contact with a name "${name}" `
       );
+
       const newContact = { name, number };
       dispatch(addContact(newContact));
       resetForm();
