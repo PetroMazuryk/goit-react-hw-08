@@ -12,14 +12,15 @@ import css from './ContactForm.module.css';
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string()
+    .matches(/^[a-zA-Z\s-]+$/, 'Must contain only letters')
     .min(2, 'Too Short!')
     .max(50, 'Too Long!')
-    .required('Required'),
+    .required('Username required for entry'),
   number: Yup.string()
-    .matches(/^[0-9]+$/, 'Must be only digits')
+    .matches(/^[0-9-]+$/, 'Must only be numbers or dashes')
     .min(5, 'Must be exactly 5 digits')
-    .max(8, 'Must be exactly 8 digits')
-    .required('Required'),
+    .max(10, 'Must be exactly 10 digits')
+    .required('Number required for entry'),
 });
 
 const initialValues = {
@@ -78,7 +79,7 @@ export const ContactForm = () => {
             </label>
             <Field
               className={css.field}
-              type="number"
+              type="name"
               name="number"
               id={numberFieldId}
             />
