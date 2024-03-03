@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { BackLink } from '../../components/BackLin/BackLin';
+import { BackLink } from '../../components/BackLink/BackLink';
 import { Notification } from '../../components/Notification/Notification';
 
 export default function NotFoundPage() {
