@@ -28,9 +28,11 @@
   background-color: rgba(177, 163, 196, 0.8);
   border: 1px solid #abdbe3;
   border-radius: 8px;
+  transition: background-color 0.5s ease, transform 0.5s ease;
 
   &:hover,
   &:focus {
+    transform: scale(1.01);
     color: rgb(237, 234, 241);
     background-color: #673c7b;
     border: 1px solid rgba(102, 44, 182, 0.5);
