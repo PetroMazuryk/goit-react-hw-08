@@ -1,5 +1,4 @@
 .section {
-  width: 540px;
   margin: 0 auto;
   padding: 20px 30px;
   outline: 1px solid;
@@ -13,4 +12,10 @@
   text-align: center;
   text-shadow: var(--text-shadow);
   margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    width: 540px;
+  }
 }

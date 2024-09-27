@@ -11,8 +11,10 @@ export const UserMenu = () => {
 
   return (
     <div className={css.wrapper}>
-      <img className={css.logo} src={logo} alt="Logo" />
-      <p className={css.username}>Welcome, {user.name} !</p>
+      <div className={css.wrapperImg}>
+        <img className={css.logo} src={logo} alt="Logo" />
+        <p className={css.username}>Welcome, {user.name} !</p>
+      </div>
 
       <button
         className={css.button}

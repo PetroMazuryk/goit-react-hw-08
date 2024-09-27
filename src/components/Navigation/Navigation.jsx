@@ -10,7 +10,7 @@ export const Navigation = () => {
   };
 
   return (
-    <nav>
+    <nav className={css.nav}>
       <NavLink to="/" className={buildLinkClass}>
         Home
       </NavLink>
