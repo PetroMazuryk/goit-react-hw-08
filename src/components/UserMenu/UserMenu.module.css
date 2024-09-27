@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 12px;
 }
 
 .wrapperImg {
@@ -55,6 +54,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .wrapper {
+    gap: 12px;
+  }
   .wrapperImg {
     flex-direction: row;
     gap: 8px;
