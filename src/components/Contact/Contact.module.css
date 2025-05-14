@@ -1,7 +1,4 @@
 .contactWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   outline: 1px solid grey;
   margin-bottom: 18px;
   padding: 4px 16px;
@@ -16,6 +13,7 @@
 .BtnWrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -65,6 +63,12 @@
 }
 
 @media screen and (min-width: 768px) {
+  .contactWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .form {
     width: 520px;
   }
